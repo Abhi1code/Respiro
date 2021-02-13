@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="overview_array">
+        <item>PEF</item>
+        <item>FVC</item>
+        <item>FEV</item>
+        <item>LHS</item>
+    </array>
+
+    <array name="result_array">
+        <item>F|T</item>
+        <item>F|V</item>
+        <item>V|T</item>
+    </array>
+</resources>

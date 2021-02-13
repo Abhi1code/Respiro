@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="end">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/appbar_view"
+                android:id="@+id/appview"/>
+
+            <FrameLayout
+                android:id="@+id/framelayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/navigation"
+                android:layout_below="@id/appview"/>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:menu="@menu/bottom_navigation"
+                android:background="?android:attr/windowBackground"/>
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

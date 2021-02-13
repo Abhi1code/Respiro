@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_16sdp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ambient noise: In check"
+        android:textColor="@color/black"
+        android:textSize="@dimen/impText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/_16sdp"
+        app:cardBackgroundColor="#EC73EA"
+        app:cardCornerRadius="@dimen/_24sdp"
+        app:layout_constraintBottom_toTopOf="@+id/info"
+        app:layout_constraintEnd_toStartOf="@+id/card2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <ImageView
+            android:id="@+id/ball1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/shape" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/_16sdp"
+        app:cardBackgroundColor="#EC73EA"
+        app:cardCornerRadius="@dimen/_24sdp"
+        app:layout_constraintBottom_toTopOf="@+id/info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <ImageView
+            android:id="@+id/ball2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/shape" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/_16sdp"
+        app:cardBackgroundColor="#EC73EA"
+        app:cardCornerRadius="@dimen/_24sdp"
+        app:layout_constraintBottom_toTopOf="@+id/info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card2"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <ImageView
+            android:id="@+id/ball3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/shape" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Record your audio"
+        android:textColor="@color/black"
+        android:textSize="@dimen/lowerImp"
+        android:layout_margin="@dimen/_16sdp"
+        app:layout_constraintBottom_toTopOf="@+id/record"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/white"
+        android:elevation="@dimen/_4sdp"
+        android:layout_margin="@dimen/_4sdp"
+        android:src="@drawable/ic_baseline_close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/record"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="#CA80F1"
+        android:elevation="@dimen/_4sdp"
+        android:layout_margin="@dimen/_4sdp"
+        android:src="@drawable/ic_baseline_mic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_weight="1"
+        android:backgroundTint="@color/white"
+        android:elevation="@dimen/_4sdp"
+        android:layout_margin="@dimen/_4sdp"
+        android:src="@drawable/ic_baseline_check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/record" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

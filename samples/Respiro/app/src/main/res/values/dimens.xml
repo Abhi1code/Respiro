@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pageTitle">@dimen/_20ssp</dimen>
+    <dimen name="paragraphText">@dimen/_14ssp</dimen>
+    <dimen name="listTitle">@dimen/_14ssp</dimen>
+    <dimen name="impText">@dimen/_16ssp</dimen>
+    <dimen name="textInput">@dimen/_16ssp</dimen>
+    <dimen name="buttons">@dimen/_14ssp</dimen>
+    <dimen name="lowerImp">@dimen/_14ssp</dimen>
+    <dimen name="smallText">@dimen/_12ssp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+</resources>

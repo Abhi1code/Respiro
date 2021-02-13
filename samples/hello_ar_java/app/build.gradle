@@ -7,7 +7,7 @@ android {
 
         // AR Optional apps must declare minSdkVersion >= 14.
         // AR Required apps must declare minSdkVersion >= 24.
-        minSdkVersion 24
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName '1.0'
@@ -25,6 +25,7 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     // ARCore (Google Play Services for AR) library.
     implementation 'com.google.ar:core:1.18.0'
 

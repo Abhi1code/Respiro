@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333">
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/localVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/remoteVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/miniVideo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_12sdp"
+        android:backgroundTint="@color/white"
+        android:translationZ="@dimen/_8sdp"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/muteaudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:backgroundTint="#333333"
+        android:elevation="@dimen/_4sdp"
+        android:src="@drawable/ic_baseline_mic"
+        app:borderWidth="0dp"
+        android:alpha="0.8"
+        app:layout_constraintBottom_toTopOf="@+id/sharingbox"
+        app:layout_constraintEnd_toStartOf="@id/mutevideo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mutevideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:backgroundTint="#333333"
+        android:elevation="@dimen/_4sdp"
+        android:src="@drawable/ic_baseline_videocam"
+        app:borderWidth="0dp"
+        android:alpha="0.8"
+        app:layout_constraintBottom_toTopOf="@+id/sharingbox"
+        app:layout_constraintEnd_toStartOf="@id/chatboxToggle"
+        app:layout_constraintStart_toEndOf="@+id/muteaudio"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/chatboxToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:backgroundTint="#333333"
+        android:elevation="@dimen/_4sdp"
+        android:src="@drawable/ic_baseline_chat"
+        app:borderWidth="0dp"
+        android:alpha="0.8"
+        app:layout_constraintBottom_toTopOf="@+id/sharingbox"
+        app:layout_constraintEnd_toStartOf="@id/hangup"
+        app:layout_constraintStart_toEndOf="@+id/mutevideo"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/hangup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:backgroundTint="#333333"
+        android:elevation="@dimen/_4sdp"
+        android:src="@drawable/ic_baseline_call_end"
+        app:borderWidth="0dp"
+        android:alpha="0.8"
+        app:layout_constraintBottom_toTopOf="@+id/sharingbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chatboxToggle"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <include
+        android:id="@+id/sharingbox"
+        layout="@layout/stage2_sharingdiv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

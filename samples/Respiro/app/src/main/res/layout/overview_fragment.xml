@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/spinner"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="#CA80F1"
+                android:gravity="center"
+                android:hint="PEF"
+                android:padding="@dimen/_4sdp"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="@dimen/lowerImp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tt"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="4dp"
+                app:spinner_arrow_show="true"
+                app:spinner_divider_color="#000000"
+                app:spinner_divider_show="true"
+                app:spinner_divider_size="0.4dp"
+                app:spinner_item_array="@array/overview_array"
+                app:spinner_popup_animation="dropdown"
+                app:spinner_popup_background="#ffffff"
+                app:spinner_popup_elevation="14dp" />
+
+            <TextView
+                android:id="@+id/des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/impText"
+                android:textColor="@color/black"
+                android:text="PEF VS TIME"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/des" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="@dimen/_16sdp"
+                app:cardCornerRadius="@dimen/_24sdp"
+                android:elevation="@dimen/_4sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your lungs are healthy"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/impText"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"/>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

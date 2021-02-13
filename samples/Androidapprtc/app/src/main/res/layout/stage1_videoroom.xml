@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/local_camera"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toStartOf="@id/remote_video"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/remote_video"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/local_camera"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="#ff0000"
+        android:text="Join"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/close"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="#ff0000"
+        android:text="Close"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/join" />
+
+    <TextView
+        android:id="@+id/lmsg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Message"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/rmsg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/local_camera" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rmsg"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lmsg"
+        app:layout_constraintTop_toBottomOf="@id/remote_video"
+        android:layout_margin="15dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="Message"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/linput"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/rinput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lmsg" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rinput"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/linput"
+        app:layout_constraintTop_toBottomOf="@id/rmsg" />
+
+    <Button
+        android:id="@+id/lsend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="#ff0000"
+        android:text="Send"
+        android:textColor="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linput"
+        app:layout_constraintEnd_toStartOf="@id/rsend"/>
+
+    <Button
+        android:id="@+id/rsend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="#ff0000"
+        android:text="Send"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rinput"
+        app:layout_constraintStart_toEndOf="@id/lsend"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
